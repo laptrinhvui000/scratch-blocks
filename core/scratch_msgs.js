@@ -53,13 +53,13 @@ Blockly.ScratchMsgs.currentLocale_ = 'en';
  * @package
  */
 Blockly.ScratchMsgs.setLocale = function(locale) {
-  if (Object.keys(Blockly.ScratchMsgs.locales).includes(locale)) {
-    Blockly.ScratchMsgs.currentLocale_ = locale;
-    Blockly.Msg = Object.assign({}, Blockly.Msg, Blockly.ScratchMsgs.locales[locale]);
-  } else {
-    // keep current locale
-    console.warn('Ignoring unrecognized locale: ' + locale);
-  }
+  // if (Object.keys(Blockly.ScratchMsgs.locales).includes(locale)) {
+  //   Blockly.ScratchMsgs.currentLocale_ = locale;
+  //   Blockly.Msg = Object.assign({}, Blockly.Msg, Blockly.ScratchMsgs.locales[locale]);
+  // } else {
+  //   // keep current locale
+  //   console.warn('Ignoring unrecognized locale: ' + locale);
+  // }
 };
 
 /**
@@ -73,13 +73,13 @@ Blockly.ScratchMsgs.setLocale = function(locale) {
  * @package
  */
 Blockly.ScratchMsgs.translate = function(msgId, defaultMsg, useLocale) {
-  var locale = useLocale || Blockly.ScratchMsgs.currentLocale_;
+  // var locale = useLocale || Blockly.ScratchMsgs.currentLocale_;
 
-  if (Object.keys(Blockly.ScratchMsgs.locales).includes(locale)) {
-    var messages = Blockly.ScratchMsgs.locales[locale];
-    if (Object.keys(messages).includes(msgId)) {
-      return messages[msgId];
-    }
-  }
+  // if (Object.keys(Blockly.ScratchMsgs.locales).includes(locale)) {
+  //   var messages = Blockly.ScratchMsgs.locales[locale];
+  //   if (Object.keys(messages).includes(msgId)) {
+  //     return messages[msgId];
+  //   }
+  // }
   return defaultMsg;
 };
